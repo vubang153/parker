@@ -1,0 +1,30 @@
+@import "base/node_modules/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required stylesheets
+@import "base/node_modules/scss/variables";
+@import "base/node_modules/scss/mixins";
+@import "base/node_modules/scss/utilities";
+
+
+@import 'base/node_modules/scss/mixins/breakpoints';
+@import 'base/node_modules/scss/mixins/container';
+@import 'base/node_modules/scss/mixins/grid';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+    property: opacity,
+    print: true,
+    values: (
+      0: 0,
+      25: .25,
+      30: .30,
+      45: .45,
+      100: 1,
+    )
+  )
+  )
+);

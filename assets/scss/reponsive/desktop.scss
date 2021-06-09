@@ -1,0 +1,57 @@
+@import '../base/variable';
+@import '../base/commons';
+@import '../function/function';
+@import '../base';
+
+@include media-breakpoint-only(xxl)
+{
+	
+}
+@include media-breakpoint-up(lg)
+{
+	.row-cols-8
+	{
+		@include row-cols(8);
+	}
+	.main-menu
+	{
+		.site-nav
+		{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0;
+			padding-left: 0;
+			li
+			{
+				list-style-type: none;
+				a
+				{
+					display: inline-block;
+					padding: rem(3) rem(20) rem(5) 0;
+					text-decoration: none;
+					font-weight: 600;
+					color: $fourth-color;
+					&:hover
+					{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	.site-contact-us
+	{
+		.contact-form
+		{
+			width: 75%;
+		}
+		&__contact
+		{
+			._content
+			{
+				white-space: pre-line;
+			}
+		}
+	}
+}
